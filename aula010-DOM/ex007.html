@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma</title>
+    
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    
+        body{
+            background-color: lightblue;
+            text-align: center;
+            margin: 20px;
+        }
+    
+        h1, p, div, input{
+            background-color: lightcoral;
+            color: white;
+            width: 200px;
+            margin: auto;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        input{
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2"> <br>
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function somar() {
+            var tn1 = document.querySelector('input#txtn1')
+            var tn2 = document.querySelector('input#txtn2')
+            var res = document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = 'A soma de ' + n1 + ' e ' + n2 + ' é igual a: ' + s}
+    </script>
+</body>
+</html>
