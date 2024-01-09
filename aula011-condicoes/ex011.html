@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site</title>
+    <style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+        background-color: lightblue;
+        text-align: center;
+        margin: 20px;
+    }
+
+    h1, p, input, div{
+        font-size: 20pt;
+        background-color: lightcoral;
+        color: white;
+        width: 200px;
+        margin: auto;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Qual é o seu pais? <input type="text" name="txtpais" id="txtpais" required>
+    <input type="button" value="Verificar" onclick="naci()">
+    <div id="naci">Olá <br></div>
+
+    <script>
+        function naci(){
+            var pais = document.querySelector('input#txtpais')
+            var naci = document.querySelector('div#naci')
+            var p = txtpais.value
+            if (p != 'Brasil') {
+                naci.innerHTML = `Você nasceu em ${p} e é estrangeiro`
+            } else {
+                naci.innerHTML = `Você nasceu em ${p} e é brasileiro`
+            }
+        }
+    </script>
+</body>
+</html>
