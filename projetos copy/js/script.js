@@ -6,7 +6,7 @@ function tabuada() {
         res.innerHTML = 'Preecha o campo acima!'
     } else {
         let n = Number(num.value)
-        res.innerHTML = 'Tabuada: <br>'
+        res.innerHTML = `Tabuada de ${n}: <br>`
         for (let c = 1;c <= 10; c++)
         res.innerHTML += `${n} x ${c} = ${n*c} <br>`
     }
